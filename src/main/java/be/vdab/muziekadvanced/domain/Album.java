@@ -19,7 +19,6 @@ public class Album {
     @JoinColumn(name = "artiestId")
     private Artiest artiest;
     private String naam;
-    private int score;
     @ElementCollection
     @CollectionTable(name = "tracks",
     joinColumns = @JoinColumn(name = "albumId"))
@@ -27,10 +26,9 @@ public class Album {
 
 
 
-    public Album(Artiest artiest, String naam, int score) {
+    public Album(Artiest artiest, String naam) {
         this.artiest = artiest;
         this.naam = naam;
-        this.score = score;
         this.tracks = new LinkedHashSet<>();
     }
 
@@ -48,9 +46,6 @@ public class Album {
         return naam;
     }
 
-    public int getScore() {
-        return score;
-    }
 
     public boolean addTrack(Track track) {
         if(track.equals(null)) {

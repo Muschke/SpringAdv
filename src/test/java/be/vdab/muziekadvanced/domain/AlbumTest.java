@@ -22,8 +22,8 @@ class AlbumTest {
     @BeforeEach
     void beforeEach() {
         artiest = new Artiest("testArtiestTwee");
-        album = new Album(artiest, "testAlbumTwee" , 7);
-        album2 = new Album(artiest, "testAlbumDrie", 8);
+        album = new Album(artiest, "testAlbumTwee" );
+        album2 = new Album(artiest, "testAlbumDrie");
         track = new Track("testTrack", LocalTime.of(0, 3, 30));
         track2 = new Track("testTrackTwee", LocalTime.of(0, 3, 30));
     }
