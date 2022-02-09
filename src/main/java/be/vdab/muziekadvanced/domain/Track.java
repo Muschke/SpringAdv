@@ -8,7 +8,7 @@ import java.util.Objects;
 
 @Embeddable
 @Access(AccessType.FIELD)
-class Track {
+public class Track {
     private String naam;
     private LocalTime tijd;
 
