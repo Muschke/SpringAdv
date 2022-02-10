@@ -36,11 +36,11 @@ class AlbumControllerTest extends AbstractTransactionalJUnit4SpringContextTests 
         var id = idVanTestAlbum();
         mvc.perform(get("/albums/{id}", id))
                 .andExpect(status().isOk())
-                .andExpect(jsonPath("album").value("testalbum"));
+                .andExpect(jsonPath("albumNaam").value("testalbum"));
 
 
         //Je geeft aan jsonPath een JSONPath expressie mee. Je zoekt daarmee data in JSON data.
-           //     Je zoekt hier de waarde van het attribuut 'album'?? linea reacta met cursus zou ik naam of id zeggen .
-        //Die moet gelijk zijn aan waarde ...
+           //     Je zoekt hier de waarde van het attribuut albumnaam.
+        //Die moet gelijk zijn aan waarde testalbum
     }
 }
